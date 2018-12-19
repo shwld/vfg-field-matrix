@@ -1,6 +1,6 @@
 {
   "name": "vfg-field-matrix",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "private": false,
   "main": "dist/field-matrix.umd.js",
   "module": "dist/field-matrix.esm.js",
