@@ -18,7 +18,7 @@
               :name="question.id"
               @click="handleChange(question, choice, $event)"
               :value="choice.value"
-              :checked="value[question.id] === choice.value"
+              :checked="value && value[question.id] === choice.value"
               :class="schema.fieldClasses"
               v-attributes="'input'"
             />
