@@ -22,7 +22,7 @@ storiesOf('vue form generator', module)
             model: 'test',
             required: true,
             questions: [
-              { name: 'わかりましたか?', id: '1' },
+              { name: 'わかりましたか?', id: '1', required: true },
               { name: 'わかりませんか?', id: '2' }
             ],
             values: [

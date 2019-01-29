@@ -11,8 +11,12 @@
       </thead>
       <tbody>
         <tr v-for="question in questions" :key="question.name">
-          <th scope="row">{{ question.name }}</th>
-          <td v-for="choice in choices" :key="choice.value" class="text-center">
+          <th scope="row">
+            <div :class="['form-group', question.required && 'required']">
+              <label>{{ question.name }}</label>
+            </div>
+          </th>
+          <td v-for="choice in choices" :key="choice.value" class="touch-sensitive text-center">
             <input
               type="radio"
               :name="question.id"
@@ -72,4 +76,18 @@ export default {
 </script>
 
 <style lang="sass">
+.touch-sensitive
+  position: relative
+  &:hover
+    background-color: #eee
+  input:after
+    position: absolute
+    top: 0
+    right: 0
+    bottom: 0
+    left: 0
+    z-index: 1
+    pointer-events: auto
+    content: ""
+    background-color: rgba(0,0,0,0)
 </style>
