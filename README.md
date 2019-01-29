@@ -1,6 +1,6 @@
 # vfg-field-matrix
 
-A matrix field for vue-form-generator
+A matrix field for [vue-form-generator](https://github.com/vue-generators/vue-form-generator)
 
 # Examples
 
