@@ -18,25 +18,27 @@ storiesOf('vue form generator', module)
         fields: [
           {
             type: 'matrix',
-            label: 'ラベル',
+            label: 'How satisfied are you with the following',
             model: 'test',
             required: true,
             questions: [
-              { name: 'わかりましたか?', id: '1', required: true },
-              { name: 'わかりませんか?', id: '2' }
+              { name: 'Books', id: 'books', required: true },
+              { name: 'Movies', id: 'movies' },
+              { name: 'Cars', id: 'cars' },
+              { name: 'Music', id: 'Music' }
             ],
             values: [
-              { name: '全くわからない', value: '1' },
-              { name: 'あまりわからなかった', value: '2' },
-              { name: 'ちょっとわかる', value: '3' },
-              { name: 'だいたい分かる', value: '4' },
-              { name: '完全に理解', value: '5' }
+              { name: 'Very Unsatisfied', value: '1' },
+              { name: 'Unsatisfied', value: '2' },
+              { name: 'Neutral', value: '3' },
+              { name: 'Satisfied', value: '4' },
+              { name: 'Very Satisfied', value: '5' }
             ]
           }
         ]
       },
       model: {
-        test: { '1': '2' }
+        test: { 'books': '3' }
       },
       formOptions: {
         validateAfterLoad: true,
